@@ -3,136 +3,199 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#050b18">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#081321">
 <title>پلی‌استیشن صادق</title>
 
 <style>
-*{box-sizing:border-box}
-
-body{
-margin:0;
-min-height:100vh;
-padding:25px 15px;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-background:radial-gradient(ellipse at top,#123b70,#050b18 75%);
-color:white;
-font-family:tahoma;
+* {
+  box-sizing: border-box;
 }
 
-.card{
-width:100%;
-max-width:460px;
-padding:30px 23px;
-text-align:center;
-border:1px solid #258cff;
-border-radius:26px;
-background:#101f36;
-box-shadow:0 20px 60px #0009;
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 25px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at top, #153c60, transparent 55%),
+    #081321;
+  color: #fff;
+  font-family: Tahoma, Arial, sans-serif;
 }
 
-h1{
-font-size:25px;
-margin:8px 0;
+.container {
+  width: 100%;
+  max-width: 430px;
+  padding: 25px 20px;
+  background: #142338;
+  border: 1px solid #29435e;
+  border-radius: 22px;
+  box-shadow: 0 15px 45px #0006;
+  text-align: center;
 }
 
-.sub{
-font-size:11px;
-letter-spacing:2px;
-color:#6ebdff;
+.logo {
+  width: 105px;
+  height: 105px;
+  object-fit: contain;
+  border-radius: 18px;
+  margin-bottom: 12px;
 }
 
-.line{
-height:1px;
-background:linear-gradient(90deg,transparent,#267ac0,transparent);
-margin:25px 0;
+h1 {
+  margin: 5px 0;
+  font-size: 24px;
+  color: #55c3ff;
 }
 
-h2{
-font-size:17px;
-color:#dceeff;
+.subtitle {
+  color: #9db4ca;
+  font-size: 12px;
+  margin-top: 9px;
 }
 
-p{
-font-size:13px;
-color:#a9c5e2;
-line-height:2;
+.line {
+  height: 1px;
+  background: #ffffff18;
+  margin: 23px 0;
 }
 
-button{
-width:100%;
-padding:16px;
-border:1px solid #62caff;
-border-radius:14px;
-color:white;
-font-family:inherit;
-font-size:16px;
-font-weight:bold;
-background:linear-gradient(100deg,#075bb8,#078bdc,#3158d8);
-cursor:pointer;
+h2 {
+  font-size: 17px;
+  margin-bottom: 12px;
 }
 
-#status{
-margin-top:18px;
-padding:14px;
-border:1px solid #24466b;
-border-radius:12px;
-background:#071426;
-color:#b9d9f6;
-font-size:12px;
-line-height:2;
+.description {
+  color: #aebfd0;
+  font-size: 13px;
+  line-height: 2;
 }
 
-.thanks{
-margin-top:20px;
-text-align:center;
-color:#8da9c8;
-font-size:11px;
-line-height:2;
+select {
+  width: 100%;
+  padding: 15px;
+  margin-top: 12px;
+  border-radius: 10px;
+  border: 1px solid #405d79;
+  background: #0b192a;
+  color: white;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
 }
 
-.thanks span{
-color:#59baff;
+button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 15px;
+  border: 0;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #0879ce, #20b5f1);
+  color: white;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(.98);
+}
+
+.status {
+  margin-top: 18px;
+  padding: 14px 10px;
+  background: #0b192a;
+  border: 1px solid #263d56;
+  border-radius: 10px;
+  color: #b9d7ef;
+  font-size: 12px;
+  line-height: 2;
+}
+
+.version {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 7px 13px;
+  border-radius: 20px;
+  background: #123b57;
+  color: #65caff;
+  font-size: 11px;
+}
+
+footer {
+  margin-top: 25px;
+  padding-top: 16px;
+  border-top: 1px solid #ffffff18;
+  color: #879db3;
+  font-size: 10px;
+  line-height: 2.2;
 }
 </style>
 </head>
 
 <body>
 
-<div class="card">
+<div class="container">
 
-<div class="logo">
-<img src="logo.png" alt="لوگوی پلی‌استیشن صادق">
-</div>
+  <img
+    src="logo.png"
+    class="logo"
+    alt="لوگوی پلی‌استیشن صادق"
+    onerror="this.style.display='none'"
+  >
 
-<h1>پلی‌استیشن صادق</h1>
-<div class="sub">PLAYSTATION SADEGH</div>
+  <h1>پلی‌استیشن صادق</h1>
 
-<div class="line"></div>
+  <div class="subtitle">
+    سیستم اختصاصی کنسول PS4
+  </div>
 
-<h2>میزبان کنسول PS4</h2>
-<p>برای شروع، دکمه زیر را انتخاب کنید.</p>
+  <div class="version">
+    نسخه میزبان 5.05 تا 14.00
+  </div>
 
-<button onclick="startHost()">
-⚡ شروع کپی‌خور
-</button>
+  <div class="line"></div>
 
-<div id="status">وضعیت: آماده</div>
+  <h2>انتخاب فریمور کنسول</h2>
 
-</div>
+  <p class="description">
+    نسخه موردنظر کنسول خود را انتخاب کنید.
+  </p>
 
-<div class="thanks">
-با تشکر از <span>عرفان، مهندس امید</span><br>
-و مجموعه <span>پلی‌باکس صالح</span>
+  <select id="firmware">
+    <option value="5.05-14.00">
+      فریمور 5.05 تا 14.00
+    </option>
+  </select>
+
+  <button onclick="startHost()">
+    شروع
+  </button>
+
+  <div class="status" id="status">
+    وضعیت سیستم: آماده
+  </div>
+
+  <footer>
+    با تشکر از عرفان، مهندس امید<br>
+    و مجموعه پلی‌باکس صالح<br>
+    PlayStation Sadegh
+  </footer>
+
 </div>
 
 <script>
-function startHost(){
-document.getElementById("status").textContent =
-"فایل‌های میزبان هنوز متصل نشده‌اند.";
+function startHost() {
+  const status = document.getElementById("status");
+  const firmware = document.getElementById("firmware").value;
+
+  status.textContent =
+    "نسخه انتخاب شد: " + firmware +
+    " | فایل‌های میزبان هنوز متصل نشده‌اند.";
 }
 </script>
 
