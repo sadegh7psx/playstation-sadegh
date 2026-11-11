@@ -6,12 +6,14 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#050b18">
 <title>پلی‌استیشن صادق</title>
+
 <style>
 *{box-sizing:border-box}
 body{
-margin:0;min-height:100vh;padding:24px 14px;
-display:flex;flex-direction:column;justify-content:center;align-items:center;
-background:radial-gradient(ellipse at top,#123b70,#050b18 70%);
+margin:0;min-height:100vh;padding:25px 15px;
+display:flex;flex-direction:column;
+justify-content:center;align-items:center;
+background:radial-gradient(ellipse at top,#123b70,#050b18 75%);
 color:white;font-family:tahoma
 }
 .card{
@@ -21,16 +23,20 @@ border-radius:26px;background:#101f36;
 box-shadow:0 20px 60px #0009
 }
 .logo{
-width:100px;height:100px;margin:auto auto 18px;
-display:grid;place-items:center;border-radius:26px;
-background:linear-gradient(145deg,#087bd1,#172b64);
-border:1px solid #65caff;
+width:120px;height:120px;margin:0 auto 18px;
+display:grid;place-items:center;border-radius:28px;
+background:linear-gradient(145deg,#102e5d,#071326);
+border:1px solid #258cff;
 box-shadow:0 0 30px #078bff66;
-font-size:48px;font-weight:bold
 }
+.logo svg{width:95px;height:95px}
 h1{font-size:25px;margin:8px 0}
 .sub{font-size:11px;letter-spacing:2px;color:#6ebdff}
-.line{height:1px;background:#267ac0;margin:25px 0}
+.line{
+height:1px;
+background:linear-gradient(90deg,transparent,#267ac0,transparent);
+margin:25px 0
+}
 h2{font-size:17px;color:#dceeff}
 p{font-size:13px;color:#a9c5e2;line-height:2}
 button{
@@ -41,21 +47,36 @@ background:linear-gradient(100deg,#075bb8,#078bdc,#3158d8);
 cursor:pointer
 }
 #status{
-margin-top:18px;padding:14px;border:1px solid #24466b;
-border-radius:12px;background:#071426;
-color:#b9d9f6;font-size:12px;line-height:2
+margin-top:18px;padding:14px;
+border:1px solid #24466b;border-radius:12px;
+background:#071426;color:#b9d9f6;
+font-size:12px;line-height:2
 }
 .thanks{
-margin-top:20px;text-align:center;color:#8da9c8;
-font-size:11px;line-height:2
+margin-top:20px;text-align:center;
+color:#8da9c8;font-size:11px;line-height:2
 }
 .thanks span{color:#59baff}
 </style>
 </head>
+
 <body>
 
 <div class="card">
-<div class="logo">PS</div>
+
+<div class="logo">
+<svg viewBox="0 0 100 100">
+<defs>
+<linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+<stop stop-color="#9beaff"/>
+<stop offset=".5" stop-color="#168dff"/>
+<stop offset="1" stop-color="#805cff"/>
+</linearGradient>
+</defs>
+<path d="M31 12v65c0 5 5 8 10 10V29l16 5c8 3 12 8 12 15 0 8-6 13-15 15l-8 2v11l13-4c17-5 27-14 27-27 0-13-9-22-25-27z" fill="url(#blue)"/>
+<path d="M20 75c-10 3-15 8-12 12 4 5 17 5 30 1l16-5v-9l-17 5c-7 2-12 2-14 0-1-1 1-3 5-4l10-3v-9z" fill="url(#blue)"/>
+</svg>
+</div>
 
 <h1>پلی‌استیشن صادق</h1>
 <div class="sub">PLAYSTATION SADEGH</div>
@@ -68,6 +89,7 @@ font-size:11px;line-height:2
 <button onclick="startHost()">⚡ شروع کپی‌خور</button>
 
 <div id="status">وضعیت: آماده</div>
+
 </div>
 
 <div class="thanks">
