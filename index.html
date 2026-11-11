@@ -6,104 +6,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>پلی‌استیشن صادق</title>
 <style>
-body {
-  margin:0;
-  background:#080d1b;
-  color:white;
-  font-family:tahoma;
-  text-align:center;
-  padding:35px 15px;
-}
-.logo {
-  font-size:45px;
-  color:#35baff;
-  font-weight:bold;
-  margin:30px;
-}
-h1 {color:#65c5ff}
-.box {
-  max-width:420px;
-  margin:auto;
-  padding:25px;
-  background:#14213a;
-  border-radius:20px;
-}
-select,button {
-  width:100%;
-  padding:15px;
-  margin-top:15px;
-  border:0;
-  border-radius:10px;
-  font-size:16px;
-}
-select {background:#091326;color:white}
-button {
-  background:linear-gradient(90deg,#087de0,#7255ec);
-  color:white;
-  font-weight:bold;
-}
-#status {
-  margin-top:20px;
-  color:#8ecbff;
-  line-height:2;
-}
+body{margin:0;background:#101522;color:white;font-family:tahoma;text-align:center;padding:35px 15px}
+.box{max-width:420px;margin:40px auto;background:#1c2638;padding:25px;border-radius:18px}
+h1{color:#39b7ff}
+select,button{width:100%;padding:15px;margin-top:18px;border:0;border-radius:9px;font-size:16px}
+button{background:#168de0;color:white;font-weight:bold}
+#status{margin-top:22px;color:#b9d9ef}
 </style>
 </head>
 <body>
-
-<div class="logo">PS</div>
-<h1>پلی‌استیشن صادق</h1>
-<p>PS4 HOST</p>
-
 <div class="box">
-<h3>انتخاب فریمور PS4</h3>
-
+<h1>پلی‌استیشن صادق</h1>
+<p>میزبان کنسول PS4</p>
 <select id="firmware">
-<option value="">انتخاب نسخه</option>
+<option value="5.05-14.00">فریمور 5.05 تا 14.00</option>
 </select>
-
-<button onclick="start()">شروع</button>
-
-<div id="status">
-ابتدا فریمور کنسول را انتخاب کنید.
+<button onclick="startHost()">شروع</button>
+<div id="status">آماده</div>
 </div>
-</div>
-
 <script>
-const versions = [
-"5.05","6.00","6.20","6.50","6.72",
-"7.00","7.02","7.50","7.51","7.55",
-"8.00","8.01","8.03","8.50",
-"9.00","9.03","9.04","9.50","9.51",
-"10.00","10.01","10.50","10.70",
-"11.00","11.02","11.50","11.52",
-"12.00","12.02","12.50","12.52",
-"13.00","13.02","13.50","13.52","14.00"
-];
-
-const select = document.getElementById("firmware");
-
-versions.forEach(v => {
-  let option = document.createElement("option");
-  option.value = v;
-  option.textContent = v;
-  select.appendChild(option);
-});
-
-function start() {
-  const version = select.value;
-  const status = document.getElementById("status");
-
-  if (!version) {
-    status.textContent = "ابتدا فریمور را انتخاب کنید.";
-    return;
-  }
-
-  status.textContent =
-    "فریمور " + version +
-    " انتخاب شد. فایل‌های معتبر این نسخه هنوز متصل نشده‌اند.";
+function startHost(){
+document.getElementById("status").textContent =
+"نسخه انتخاب شد؛ فایل‌های مجاز هنوز به سایت متصل نشده‌اند.";
 }
 </script>
-
 </body>
 </html>
