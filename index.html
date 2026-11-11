@@ -3,31 +3,69 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101827">
 <title>پلی‌استیشن صادق</title>
 <style>
-body{margin:0;background:#101522;color:white;font-family:tahoma;text-align:center;padding:35px 15px}
-.box{max-width:420px;margin:40px auto;background:#1c2638;padding:25px;border-radius:18px}
-h1{color:#39b7ff}
-select,button{width:100%;padding:15px;margin-top:18px;border:0;border-radius:9px;font-size:16px}
-button{background:#168de0;color:white;font-weight:bold}
-#status{margin-top:22px;color:#b9d9ef}
+*{box-sizing:border-box}
+body{
+margin:0;min-height:100vh;padding:25px 15px;
+display:grid;place-items:center;
+background:radial-gradient(circle at top,#1b3654,#101827 65%);
+color:white;font-family:tahoma
+}
+.card{
+width:100%;max-width:420px;padding:25px 20px;
+background:#192638;border:1px solid #30465e;
+border-radius:22px;text-align:center;
+box-shadow:0 15px 40px #0005
+}
+.logo{
+width:58px;height:58px;margin:auto auto 14px;
+display:grid;place-items:center;border-radius:17px;
+background:linear-gradient(135deg,#36b8ff,#1268c7);
+font-size:25px;font-weight:bold
+}
+h1{font-size:23px;margin:8px 0}
+.sub{font-size:12px;color:#9eb6cf}
+hr{border:0;border-top:1px solid #ffffff18;margin:22px 0}
+h2{font-size:17px}
+p{font-size:13px;color:#b5c8dc;line-height:2}
+select,button{
+width:100%;padding:15px;border:0;border-radius:11px;
+font-family:inherit;font-size:14px
+}
+select{background:#101c2b;color:white;border:1px solid #40566d}
+button{
+margin-top:14px;color:white;font-weight:bold;
+background:linear-gradient(90deg,#168de0,#26b5ee)
+}
+#status{
+margin-top:17px;padding:12px;background:#101c2b;
+border-radius:10px;color:#a9c9e5;font-size:12px
+}
+footer{margin-top:20px;color:#8298af;font-size:11px}
 </style>
 </head>
 <body>
-<div class="box">
+<div class="card">
+<div class="logo">PS</div>
 <h1>پلی‌استیشن صادق</h1>
-<p>میزبان کنسول PS4</p>
+<div class="sub">میزبان کنسول PS4</div>
+<hr>
+<h2>انتخاب نسخه کنسول</h2>
+<p>نسخه موردنظر کنسول خود را انتخاب کنید.</p>
 <select id="firmware">
 <option value="5.05-14.00">فریمور 5.05 تا 14.00</option>
 </select>
 <button onclick="startHost()">شروع</button>
-<div id="status">آماده</div>
+<div id="status">وضعیت: آماده</div>
+<footer>PlayStation Sadegh</footer>
 </div>
 <script>
 function startHost(){
-document.getElementById("status").textContent =
-"نسخه انتخاب شد؛ فایل‌های مجاز هنوز به سایت متصل نشده‌اند.";
+document.getElementById("status").textContent=
+"نسخه انتخاب شد؛ بخش فایل‌ها هنوز راه‌اندازی نشده است.";
 }
 </script>
 </body>
