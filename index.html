@@ -4,68 +4,91 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#101827">
+<meta name="theme-color" content="#080f1d">
 <title>پلی‌استیشن صادق</title>
 <style>
 *{box-sizing:border-box}
 body{
 margin:0;min-height:100vh;padding:25px 15px;
-display:grid;place-items:center;
-background:radial-gradient(circle at top,#1b3654,#101827 65%);
-color:white;font-family:tahoma
+display:flex;flex-direction:column;justify-content:center;
+background:radial-gradient(ellipse at top,#183b60,#080f1d 70%);
+color:#fff;font-family:tahoma
 }
 .card{
-width:100%;max-width:420px;padding:25px 20px;
-background:#192638;border:1px solid #30465e;
-border-radius:22px;text-align:center;
-box-shadow:0 15px 40px #0005
+width:100%;max-width:440px;margin:auto;
+padding:28px 22px;background:#111e30;
+border:1px solid #294764;border-radius:22px;
+text-align:center;box-shadow:0 18px 50px #0007
 }
 .logo{
-width:58px;height:58px;margin:auto auto 14px;
-display:grid;place-items:center;border-radius:17px;
-background:linear-gradient(135deg,#36b8ff,#1268c7);
-font-size:25px;font-weight:bold
+width:66px;height:66px;margin:0 auto 15px;
+display:grid;place-items:center;border-radius:19px;
+background:linear-gradient(140deg,#36c4ff,#1262c4);
+font-size:27px;font-weight:bold;
+box-shadow:0 5px 25px #168de055
 }
-h1{font-size:23px;margin:8px 0}
-.sub{font-size:12px;color:#9eb6cf}
-hr{border:0;border-top:1px solid #ffffff18;margin:22px 0}
-h2{font-size:17px}
-p{font-size:13px;color:#b5c8dc;line-height:2}
+h1{font-size:24px;margin:8px 0;color:#fff}
+.sub{font-size:12px;color:#8eabc9;letter-spacing:1px}
+.line{height:1px;background:#ffffff18;margin:24px 0}
+h2{font-size:17px;color:#d8edff}
+p{font-size:13px;color:#9eb4cc;line-height:2}
 select,button{
-width:100%;padding:15px;border:0;border-radius:11px;
+width:100%;padding:15px;border-radius:11px;
 font-family:inherit;font-size:14px
 }
-select{background:#101c2b;color:white;border:1px solid #40566d}
+select{
+background:#0b1727;color:white;
+border:1px solid #385675
+}
 button{
-margin-top:14px;color:white;font-weight:bold;
-background:linear-gradient(90deg,#168de0,#26b5ee)
+margin-top:15px;border:0;color:white;
+font-weight:bold;cursor:pointer;
+background:linear-gradient(90deg,#087bd1,#20b9ed);
+box-shadow:0 5px 18px #168de033
 }
+button:active{transform:scale(.98)}
 #status{
-margin-top:17px;padding:12px;background:#101c2b;
-border-radius:10px;color:#a9c9e5;font-size:12px
+margin-top:18px;padding:13px;
+background:#0b1727;border:1px solid #263c54;
+border-radius:10px;color:#a9cce9;font-size:12px
 }
-footer{margin-top:20px;color:#8298af;font-size:11px}
+.thanks{
+max-width:440px;width:100%;margin:20px auto 0;
+text-align:center;color:#9eb4cc;font-size:12px;
+line-height:2
+}
+.thanks span{color:#42baff}
 </style>
 </head>
 <body>
 <div class="card">
 <div class="logo">PS</div>
 <h1>پلی‌استیشن صادق</h1>
-<div class="sub">میزبان کنسول PS4</div>
-<hr>
-<h2>انتخاب نسخه کنسول</h2>
-<p>نسخه موردنظر کنسول خود را انتخاب کنید.</p>
+<div class="sub">PLAYSTATION SADEGH</div>
+
+<div class="line"></div>
+
+<h2>میزبان کنسول PS4</h2>
+<p>نسخه فریمور کنسول خود را انتخاب کنید.</p>
+
 <select id="firmware">
 <option value="5.05-14.00">فریمور 5.05 تا 14.00</option>
 </select>
+
 <button onclick="startHost()">شروع</button>
+
 <div id="status">وضعیت: آماده</div>
-<footer>PlayStation Sadegh</footer>
 </div>
+
+<div class="thanks">
+با تشکر از <span>عرفان، مهندس امید</span><br>
+و مجموعه <span>پلی‌باکس صالح</span>
+</div>
+
 <script>
 function startHost(){
 document.getElementById("status").textContent=
-"نسخه انتخاب شد؛ بخش فایل‌ها هنوز راه‌اندازی نشده است.";
+"نسخه انتخاب شد؛ فایل‌های میزبان هنوز متصل نشده‌اند.";
 }
 </script>
 </body>
